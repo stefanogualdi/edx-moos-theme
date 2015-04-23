@@ -1,0 +1,79 @@
+<%! from django.core.urlresolvers import reverse %>
+<%namespace name='static' file='/static_content.html'/>
+
+<%inherit file="/main.html" />
+
+<%block name="title"><title>About the MOOS project</title></%block>
+
+<%block name="js_extra">
+  <script type="text/javascript">
+    $(function () {
+      $('section.message').hide();
+      $('#about-menu a').removeClass('active');
+      window.scrollTo(0, 0);
+
+      if (document.location.href.indexOf('#contact') > -1) {
+        $('section#contact').show();
+        $('#about-menu a.contact').addClass('active');
+      } else if (document.location.href.indexOf('#partners') > -1) {
+        $('section#partners').show();
+        $('#partners-menu a.partners').addClass('active');
+      } else {
+        $('section#about').show();
+        $('#about-menu a.about').addClass('active');
+      }
+
+      $('#about-menu a').click(function (event) {
+        event.preventDefault();
+        $('#about-menu a').removeClass('active');
+        $(this).addClass('active');
+        var clickId = "section" + $(this).attr('href');
+        $('section.message').hide();
+        $(clickId).show();
+      });
+    });
+  </script>
+</%block>
+
+<section class="container about" style="width: auto;">
+  <nav id="about-menu">
+    <a href="#about" class="about active">About</a>
+    <a href="#partners" class="partners">Partners</a>
+    <a href="#contact" class="contact">Contact</a>
+  </nav>
+
+  <section class="vision">
+
+      ## About Section ##
+      <section class="message left" id="about">
+        <article>
+          <h2>About MOOS project</h2>
+
+          <p></p>
+        </article>
+        <hr class="fade-right-hr-divider">
+      </section>
+
+      ## Partners Section ##
+      <section class="message left" id="partners">
+        <article>
+          <h2>Partners</h2>
+
+          <p>
+          </p>
+        </article>
+        <hr class="fade-right-hr-divider">
+      </section>
+
+      ## Contact Section ##
+      <section class="message left" id="contact">
+        <article >
+          <h2>Contact Information</h2>
+
+          <p>&nbsp;</p>
+
+        </article>
+        <hr class="fade-right-hr-divider">
+      </section>
+    </section>
+  </section>

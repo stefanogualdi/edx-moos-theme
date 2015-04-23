@@ -1,0 +1,10 @@
+## mako
+<%! from django.core.urlresolvers import reverse %>
+<%namespace name='static' file='/static_content.html'/>
+
+<%inherit file="/navigation.html"/>
+
+<%block name="navigation_logo">
+  <img src="${static.url('themes/moos/images/erasmus_plus.png')}" height="50" alt="Home Page" />
+</%block>
+
