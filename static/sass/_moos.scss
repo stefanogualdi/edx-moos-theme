@@ -18,12 +18,12 @@ $bg-color: #f7fe81; //Selected Content BG Color, ie. calendar          ***Custom
 //Main BG Color Variables
 $main-bg: #047db9;
 $main-bg-60: lighten($main-bg, 18.5%); //Main Border/HR Color
-$main-bg-25: lighten($main-bg, 25%); 
+$main-bg-25: lighten($main-bg, 25%);
 
 //Secondary Color Variables
 $secondary: #9fd3ec;
 $secondary-50: lighten($secondary, 9%);
-$secondary-25: lighten($secondary, 20%); //Important Heading BG Color 
+$secondary-25: lighten($secondary, 20%); //Important Heading BG Color
 
 //Gray Color Variables
 $gray: #3f3f3f; //Main Text Color
@@ -207,14 +207,14 @@ $video-thumb-url: '../themes/moos/images/edx.png';
 			display: inline-block;
 			margin: 0;
 			padding: 0;
-			
+
 			img {
-				height: 170px;	
+				height: 170px;
 			}
 		}
 	}
 }
-    
+
 
 //-----------------
 //  Mixin Styles
