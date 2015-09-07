@@ -192,6 +192,11 @@ $register-banner-image: none;
 
 $video-thumb-url: '../themes/moos/images/edx.png';
 
+// HOME PAGE FIX
+.home > header {
+  background-position: right center;
+}
+
 //-----------------
 //  Partners
 //-----------------
